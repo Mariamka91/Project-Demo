@@ -35,9 +35,9 @@ function timer()
 {
       t = setTimeout(add, 1000);
 }
-  
+
   $("#quoteButton").on("click", function() {
-  
+
     quote();
   });
 
@@ -83,7 +83,7 @@ function quote() {
       success: function(response) {
         $('#quote').html(response.quoteText)
         $('#author').html("<br/>&dash; " + response.quoteAuthor)
-  
+
       }
     });
   }
