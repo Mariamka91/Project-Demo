@@ -17,12 +17,19 @@
 
     <!--- jQuery-->
     <script src="https://code.jquery.com/jquery.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.1/Chart.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.min.js"></script>
+    <!--Firebase-->
+    <script src="https://www.gstatic.com/firebasejs/7.6.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.6.0/firebase-database.js"></script>
+
+    <!--Chart-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.min.js"></script>
   </head>
   <body>
+    <h2 id="headerText">Study App With Motivational Quotes</h2>
     <header id="home">
       <div class="container text-center">
-        <h2 id="headerText">Study App With Motivational Quotes</h2>
+      
 
         <!-- Random Quotes starts here -->
         <div class="quote-div">
@@ -83,6 +90,20 @@
       </div>
     </div>
     <!-- Timer Section End -->
+    <!--Chart-->
+    <div id="chartSection">
+
+			<div class="container text-center">
+
+				<h1 id="sectionHeaders">Weekly Chart</h1>
+				<br>
+				<div class="container" id="chartContainer">
+				 	<canvas id="myChart"></canvas>
+				</div>
+
+			</div>
+
+		</div>
     <br>
    <!--footer-->
     <footer class="footer">
