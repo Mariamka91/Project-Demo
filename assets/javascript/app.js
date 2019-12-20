@@ -82,8 +82,63 @@ function quote() {
       },
       success: function(response) {
         $('#quote').html(response.quoteText)
-        $('#author').html("<br/>&dash; " + response.quoteAuthor)
-
+        $('#author').html("<br/>&dash; " + response.quoteAuthor);
       }
-    });
+    })
   }
+  //Chart section
+  let myChart = document.getElementById('myChart').getContext('2d');
+    //Global Options
+    Chart.defaults.global.defaultFontFamily = 'Lato';
+    Chart.defaults.global.defaultFontSize = 18;
+    Chart.defaults.global.defaultFontColor = '#777';
+    let StudyChart = new Chart(myChart, {
+    type: 'bar', //bar, horizontal, pie, line
+    data:{
+        labels:['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'],
+        datasets:[{
+        label: 'Days',
+        data:[
+            4,
+            6,
+            8,
+            5,
+            3,
+            0
+            ],
+            backgroundColor:[
+                'rgba(255, 99, 132, 0.6)',
+                'rgba(54, 162, 235, 0.6)',
+                'rgba(75, 192, 192, 0.6)',
+                'rgba(153, 102, 255, 0.6)',
+                'rgba(255, 159, 64, 0.6)',
+                'rgba(255, 99, 132, 0.6)'
+                ],
+                borderWidth:2,
+                hoverBorderWidth:3,
+                hoverBorderColor:'red',
+        }]
+    },
+    options:{
+        title:{
+            display: true,
+            text: 'Daily Study Time',
+            fontSize: 25
+        },
+    legend:{
+        display: false,
+        position:'right',
+        labels:{
+            fontColor:'#000'
+        }
+    },
+    layout:{
+        padding:{
+            left:50,
+            right:0,
+            bottom:0,
+            top: 0
+    }
+    }
+    }
+  });

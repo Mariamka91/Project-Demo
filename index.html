@@ -5,7 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>Study App</title>
-    <!--- Bootstrap --->
+     <!--Firebase-->
+     <script src="https://www.gstatic.com/firebasejs/7.6.0/firebase-app.js"></script>
+     <script src="https://www.gstatic.com/firebasejs/7.6.0/firebase-database.js"></script>
+     <!--- jQuery-->
+     <script src="https://code.jquery.com/jquery.js"></script>
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.min.js"></script>
+     <!--- Bootstrap --->
     <link
       rel="stylesheet"
       href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
@@ -15,13 +21,7 @@
     <!--- CSS Stylesheet --->
     <link rel="stylesheet" type="text/css" href="assets/css/style.css" />
 
-    <!--- jQuery-->
-    <script src="https://code.jquery.com/jquery.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.min.js"></script>
-    <!--Firebase-->
-    <script src="https://www.gstatic.com/firebasejs/7.6.0/firebase-app.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/7.6.0/firebase-database.js"></script>
-
+    
     <!--Chart-->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.min.js"></script>
   </head>
@@ -90,20 +90,11 @@
       </div>
     </div>
     <!-- Timer Section End -->
-    <!--Chart-->
-    <div id="chartSection">
-
-			<div class="container text-center">
-
-				<h1 id="sectionHeaders">Weekly Chart</h1>
-				<br>
-				<div class="container" id="chartContainer">
-				 	<canvas id="myChart"></canvas>
-				</div>
-
-			</div>
-
-		</div>
+    <!--- Chart Section start --->
+    <div class="container">
+      <canvas id="myChart"></canvas>
+    </div>
+    <!--- Chart Section End-->
     <br>
    <!--footer-->
     <footer class="footer">
